@@ -9,7 +9,7 @@ developmentChains.includes(network.name)
           let fundMe, deployer
           const sendValue = ethers.utils.parseUnits("0.1", "ether")
           beforeEach(async function () {
-              deployer = await getNamedAccounts().deployer
+              deployer = (await getNamedAccounts()).deployer
               fundMe = await ethers.getContract("FundMe", deployer)
           })
 
